@@ -1,0 +1,47 @@
+<div class="left">
+<%= button_to "home",{controller: "home", action: "index" }%>
+</div>
+<div class="body">
+<center><h3>Registration Form</h3>
+
+<% if !flash[:error].nil? %>
+    <div class="alert alert-error">
+        <button type="button" class="close" data-dismiss="alert" >×</button>
+        <strong><%= flash[:error] %></strong>
+    </div>
+<% end %> 
+
+<%= form_for @user , :url => {:action => "regsuccess"} do |f| %>
+<table>
+<tr>
+    <td><%= label_tag 'Emp name' %></td>
+    <td><%= f.text_field :name %></td>
+</tr>
+<tr>
+    <td><%= label_tag 'Password' %></td>
+    <td><%= f.password_field :password %></td>
+</tr>
+<tr>
+    <td><%= label_tag 'Gender' %></td>
+    <td><%= f.radio_button :gender, 'male' %>male
+        <%= f.radio_button :gender, 'female' %>female</td>
+</tr>
+<tr>
+    <td><%= label_tag 'Qualification' %></td>
+    <td><%= f.select :qualification, "<option>Software Trainee</option><option>Software Developer</option><option>Software Engineer</option><option>Delivery Manager</option>".html_safe %></td>
+</tr>
+<tr>
+    <td><%= label_tag 'Email Id' %></td>
+    <td><%= f.text_field :email %></td>
+</tr>
+<tr>
+    <td><%= label_tag 'Mobi No' %></td>
+    <td><%= f.text_field :mobino %></td>
+</tr>
+<tr>
+    <td colspan="2" ><center><%= f.submit "Submit"%></center></td>
+</tr>
+</table>
+<% end %>
+</center>
+</div>

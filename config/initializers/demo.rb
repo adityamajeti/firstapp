@@ -1,0 +1,1 @@
+USER_CONFIG = YAML.load_file("/home/paradigm/firstapp/config/user.yml")[Rails.env]

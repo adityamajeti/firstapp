@@ -1,0 +1,23 @@
+<div class="left">
+<table>
+<tr>
+<td><%= button_to "home",{controller: "home", action: "index" }%></td>
+<td><%= button_to "view1",{controller: "dashbord", action: "index" }%></td>
+<td><%= button_to "view2",{controller: "newview", action: "index" }%></td>
+</tr>
+</table>
+</div>
+<div class="right">
+<table>
+<tr>
+<td >welcome <%= session[:user_id] %></td><td><%= button_to "logout",{controller: "home", action: "login" }%></td>
+</tr>
+</table>
+</div>
+<div class="body">
+<center><h1>successfully loged in</h1>
+<table cellpadding="10" border="3">
+<%= render partial: "datadispone", collection: @users, :as => :member %>
+</table>
+</center>
+</div>

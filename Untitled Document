@@ -1,0 +1,46 @@
+
+ 
+<%= form_tag(:action => "regsuccess", :method => "post") do %>
+<table>
+<tr>
+    <td><%= label_tag 'Emp name' %></td>
+    <td><%= text_field_tag 'name' %></td>
+</tr>
+<tr>
+    <td><%= label_tag 'Password' %></td>
+    <td><%= password_field_tag 'password' %></td>
+</tr>
+<tr>
+    <td><%= label_tag 'Gender' %></td>
+    <td><%= radio_button_tag 'gender', 'male' %>male
+	    <%= radio_button_tag 'gender', 'female' %>female</td>
+</tr>
+<tr>
+    <td><%= label_tag 'Qualification' %></td>
+    <td><%= select_tag "qualification", "<option>Software Trainee</option><option>Software Developer</option><option>Software Engineer</option><option>Delivery Manager</option>".html_safe %></td>
+</tr>
+<tr>
+    <td><%= label_tag 'Email Id' %></td>
+    <td><%= text_field_tag 'email' %></td>
+</tr>
+<tr>
+    <td><%= label_tag 'Mobi No' %></td>
+    <td><%= text_field_tag 'mobino' %></td>
+</tr>
+<tr>
+    <td><%= label_tag 'permenant_address' %></td>
+    <td><%= text_area_tag 'permenant_address' %></td>
+</tr>
+<tr>
+    <td><%= label_tag 'current_address' %></td>
+    <td><%= text_area_tag 'current_address' %></td>
+</tr>
+<tr>
+    <td colspan="2" ><center><%= submit_tag "Submit"%></center></td>
+</tr>
+</table>
+<%end%>
+</center>
+
+
+

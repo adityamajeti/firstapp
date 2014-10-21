@@ -1,0 +1,30 @@
+<div class="left">
+<%= button_to "home",{controller: "home", action: "index" }%>
+</div>
+<div class="body">
+<center>
+	<h1>Login Form</h1>
+	<%= form_tag(:action => "authentication", :method => "post") do %>
+	<table>
+	<tr>
+		<td>		<%= label_tag(:emailid, "Email id:") %>	</td>
+		<td>  		<%= text_field_tag(:emailid) %> 		</td>
+	</tr>
+	<tr>
+		<td> 		<%= label_tag(:password, "Password:") %>	</td>
+		<td> 		<%= password_field_tag(:password) %>  		</td>
+	</tr>	
+  	<tr>	
+  		<td>		<%= link_to "Sign up", :controller => "home", :action => "signup" %>	</td>
+		<td align="right">		<%= submit_tag("login") %>	</td>
+  	</tr>
+    </table>
+	<% end %>
+</center>
+</div>
+<% if !flash[:error].nil? %>
+    <div class="alert alert-error">
+        <button type="button" class="close" data-dismiss="alert" >×</button>
+        <strong><%= flash[:error] %></strong>
+    </div>
+<% end %> 
