@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firstapp</title>
+  <%= stylesheet_link_tag    "test", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<%= render 'home/header' %>
+<body>
 <div class="left">
 <table>
 <tr>
@@ -18,7 +28,17 @@
 <div class="body">
 <center><h1>successfully loged in</h1>
 <table cellpadding="10" border="3">
-<%= render partial: "datadispone", collection: @users, :as => :member %>
-</table>
+<th>Name</th>
+<th>Gender</th>
+<th>Qualification</th>
+<th>email id</th>
+<th>Mobile No.</th>
+<%= render partial: "user", collection: @users %></table>
 </center>
 </div>
+</body>
+<%= render 'dashbord/footer' %>
+</html>
+
+
+

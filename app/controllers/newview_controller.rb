@@ -1,5 +1,5 @@
 class NewviewController < ApplicationController
-  layout "adminlayout"
+  #layout "adminlayout"
   def index
   	@users = User.all
   end

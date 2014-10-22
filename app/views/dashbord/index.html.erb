@@ -2,9 +2,9 @@
 <table>
 <tr>
 <td><%= button_to "home",{controller: "home", action: "index" }%></td>
-<td><%= button_to "view1",{controller: "dashbord", action: "index" }%></td>
-<td><%= button_to "view2",{controller: "newview", action: "index" }%></td>
-
+<td><%= button_to "Admin layout",{controller: "dashbord", action: "index" }%></td>
+<td><%= button_to "Default layout",{controller: "newview", action: "index" }%></td>
+<td><%= button_to "false layout",{controller: "false", action: "index" }%></td>
 </tr>
 </table>
 </div>
@@ -23,7 +23,8 @@
 <th>Qualification</th>
 <th>email id</th>
 <th>Mobile No.</th>
-<%= render partial: "datadisp", collection: @users, :as => :member %>
+<%#= render partial: "datadisp", collection: @users, :as => :member %>
+<%= render partial: "user", collection: @users %>
 </table>
 </center>
 </div>

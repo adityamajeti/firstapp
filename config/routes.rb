@@ -1,5 +1,6 @@
 Firstapp::Application.routes.draw do
 
+  get "false/index"
   get "newview/index"
   get "dashbord/index"
   get "home/index"
@@ -12,8 +13,8 @@ Firstapp::Application.routes.draw do
   match "home/authentication" => "home#authentication", :via => :post
   match "home/regsuccess" => "home#regsuccess", :via => :post
   
-
-  match "dashbord/index" => "dashbord#index", :via => :post 
+  match "dashbord/index" => "dashbord#index", :via => :post
+  match "false/index" => "false#index", :via => :post 
   match "newview/index" => "newview#index", :via => :post 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
